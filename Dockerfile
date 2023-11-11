@@ -2,7 +2,8 @@
 FROM golang:latest
 
 # Set metadata labels
-LABEL maintainer="Rami, Hasan and Hussain"
+LABEL maintainer = "Rami, Hasan, Hussain"
+LABEL descriptino = "ASCII art web Docker image"
 
 # Set the working directory
 WORKDIR /app
@@ -11,10 +12,12 @@ WORKDIR /app
 COPY . .
 
 # Build the application
-RUN go build -o main .
+RUN go build -o PICASO cmd/asciiartweb/main.go
 
 # Expose the application port
+ENV port=8080
+
 EXPOSE 8080
 
 # Set the command to run the application
-CMD ["/app/main"]
+CMD ["/app/PICASO"]
