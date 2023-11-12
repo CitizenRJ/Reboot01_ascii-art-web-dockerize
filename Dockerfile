@@ -3,7 +3,7 @@ FROM golang:latest
 
 # Set metadata labels
 LABEL maintainer = "Rami, Hasan, Hussain"
-LABEL descriptino = "ASCII art web Docker image"
+LABEL description = "ASCII art web Docker image"
 
 # Set the working directory
 WORKDIR /ascii-art-web-dockerize
